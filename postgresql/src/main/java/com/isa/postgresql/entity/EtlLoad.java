@@ -5,7 +5,10 @@ import lombok.*;
 
 import java.time.ZonedDateTime;
 
-
+/**
+ * Representa uma carga ETL persistida pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ * */
 @Entity
 @Table(name = "etl_load")
 @Getter

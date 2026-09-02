@@ -5,6 +5,11 @@ import lombok.*;
 
 import java.util.Date;
 
+/**
+ * Representa um dia de observação persistido pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ */
+
 @Entity
 @Table(name = "observation_day")
 @Getter

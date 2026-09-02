@@ -6,6 +6,11 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * Representa a hospitalização observada persistida pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ * */
+
 @Entity
 @Table(name = "hospitalization_observation")
 @Getter

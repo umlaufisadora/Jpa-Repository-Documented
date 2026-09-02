@@ -11,6 +11,11 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+/**
+ * Representa a vacinação observada persistida pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ */
+
 @Entity
 @Table(name = "vaccination_observation")
 @Getter

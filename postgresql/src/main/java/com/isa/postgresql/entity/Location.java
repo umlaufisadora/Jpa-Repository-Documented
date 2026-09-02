@@ -3,6 +3,11 @@ package com.isa.postgresql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * Representa uma localização persistida pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ * */
+
 @Entity
 @Table(name = "location")
 @Getter

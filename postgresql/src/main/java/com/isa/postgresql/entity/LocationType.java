@@ -5,6 +5,11 @@ import lombok.*;
 
 import java.util.UUID;
 
+/**
+ * Representa um tipo de localização persistido pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados pela camada de persistência</p>
+ */
+
 @Entity
 @Table(name = "location_type")
 @Getter

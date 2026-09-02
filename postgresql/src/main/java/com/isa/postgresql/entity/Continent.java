@@ -3,6 +3,11 @@ package com.isa.postgresql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * Representa um continente persistido pela aplicação
+ * <p>Esta entidade contém os dados iternos utilizados para camada de persistência</p>
+ * */
+
 @Entity
 @Table(name = "continent")
 @Getter

@@ -8,6 +8,11 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
+/**
+ * Representa uma política de observação persistida pela aplicação
+ * <p>Esta entiade contém os dados internos utilizados para camada de persistência</p>
+ */
+
 @Entity
 @Table(name = "policy_observation")
 @Getter

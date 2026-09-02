@@ -8,6 +8,11 @@ import lombok.*;
 
 import java.util.UUID;
 
+/**
+ * Representa um teste unitário persistido pela aplicação
+ * <p>Esta entidade contém os dados internos utilizados para camada de persistência</p>
+ */
+
 @Entity
 @Table(name = "test_unit")
 @Getter
