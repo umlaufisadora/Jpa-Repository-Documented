@@ -16,7 +16,7 @@ import java.util.Date;
 public class ExcessMortalityObservation
 {
     @EmbeddedId
-    private CompoundKeyObservationDay compoundKey;
+    private ObservationDay compoundKey;
 
     @Column(name = "excess_mortality_absolute")
     private BigDecimal excessMortalityAbsolute;

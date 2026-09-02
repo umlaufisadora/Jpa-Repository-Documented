@@ -16,7 +16,7 @@ import java.util.Date;
 public class EpidemiologyObservation
 {
     @EmbeddedId
-    private CompoundKeyObservationDay compoundKey;
+    private ObservationDay compoundKey;
 
     @Column(name = "total_cases")
     private Long totalCases;

@@ -12,8 +12,15 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Embeddable
 public class ObservationDay
 {
-    @EmbeddedId
-    private CompoundKeyObservationDay compoundKey;
+    @Id
+    @OneToOne
+    @JoinColumn(name = "location_id", nullable = false)
+    private Long locationId;
+
+    @Id
+    @Column(name = "observation_date", nullable = false)
+    private Date observationDate;
 }

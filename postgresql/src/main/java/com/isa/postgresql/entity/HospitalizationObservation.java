@@ -16,7 +16,7 @@ import java.util.Date;
 public class HospitalizationObservation
 {
     @EmbeddedId
-    private CompoundKeyObservationDay compoundKey;
+    private ObservationDay compoundKey;
 
     @Column(name = "icu_patients")
     private BigDecimal icuPatients;

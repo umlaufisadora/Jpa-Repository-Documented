@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class LocationProfile
 {
     @Id
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "location_id")
     private Long locationId;
 
