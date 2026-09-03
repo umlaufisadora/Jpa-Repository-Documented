@@ -20,7 +20,7 @@ import java.util.UUID;
 public class LocationType
 {
     @Id
-    //Fazer a geração na Service
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_type_code", nullable = false, length = 30)
     private UUID locationTypeCode;
 

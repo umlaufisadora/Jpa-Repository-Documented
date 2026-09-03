@@ -30,9 +30,10 @@ public class Location
 
     @ManyToOne
     @JoinColumn(name = "continent_id")
-    private Short continentId;
+    private Continent continentId;
 
     @OneToOne
+    @MapsId
     @JoinColumn(name = "location_type_code")
-    private String locationTypeCode;
+    private LocationType locationTypeCode;
 }

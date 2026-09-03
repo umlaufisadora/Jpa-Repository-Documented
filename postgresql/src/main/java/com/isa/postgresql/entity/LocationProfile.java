@@ -21,8 +21,9 @@ public class LocationProfile
 {
     @Id
     @OneToOne
+    @MapsId
     @JoinColumn(name = "location_id")
-    private Long locationId;
+    private Location locationId;
 
     @Column(name = "population", nullable = false)
     private Long population;

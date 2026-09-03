@@ -3,6 +3,7 @@ package com.isa.postgresql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -18,12 +19,12 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 @Embeddable
-public class ObservationDay
+public class ObservationDay implements Serializable
 {
     @Id
     @OneToOne
     @JoinColumn(name = "location_id", nullable = false)
-    private Long locationId;
+    private Location locationId;
 
     @Id
     @Column(name = "observation_date", nullable = false)
