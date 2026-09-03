@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class LocationMapper
 {
+    /**
+     * Mapper para transformar entidade em  LocationResponse (DTO)
+     * @param location entity Entidade com dados de Location a ser convertida
+     * @return Response de Location (DTO)
+     */
     public LocationResponse toDTO(Location location)
     {
         return new LocationResponse(

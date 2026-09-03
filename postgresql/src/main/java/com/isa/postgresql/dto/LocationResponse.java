@@ -13,6 +13,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * @param locationTypeCode ID gerado para identificar o tipo de localização
  */
 
+@Schema(description = "Dados de uma Location retornados pela API")
 public record LocationResponse(
 
         @Schema(

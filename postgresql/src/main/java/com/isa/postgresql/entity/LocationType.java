@@ -27,4 +27,7 @@ public class LocationType
     @Column(name = "description", nullable = false, length = 150)
     private String description;
 
+    @OneToOne(mappedBy = "location_type_code")
+    private Location location;
+
 }

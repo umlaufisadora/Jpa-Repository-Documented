@@ -3,6 +3,8 @@ package com.isa.postgresql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 /**
  * Representa um continente persistido pela aplicação
  * <p>Esta entidade contém os dados iternos utilizados para camada de persistência</p>
@@ -24,4 +26,7 @@ public class Continent
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @OneToMany(mappedBy = "continent_id")
+    private List<Location> location;
 }

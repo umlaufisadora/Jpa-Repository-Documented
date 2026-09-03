@@ -17,6 +17,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+/**
+ * Serviço que centraliza as regras de negócios relacionadas a Location
+ */
+
 @Service
 @AllArgsConstructor
 public class LocationService
@@ -26,12 +30,22 @@ public class LocationService
     private final LocationProfileMapper profileMapper;
     private final LocationProfileRepository profileRepository;
 
+    /**
+     * Listar todas as localizações
+     * @param pageable página com parâmetros de retorno informado (ex: size=20)
+     * @return Página de DTOs {@link LocationResponse} com dados representativos de Location
+     */
     @Transactional(readOnly = true)
     public Page<LocationResponse> listarTudo(Pageable pageable)
     {
         return repository.findAll(pageable).map(mapper::toDTO);
     }
 
+    /**
+     * Buscar localização a partir do código ISO
+     * @param isoCode parâmetro de código Iso usado para pesquisa
+     * @return DTO {@link LocationResponse} com dados representativos de Location
+     */
     @Transactional(readOnly = true)
     public LocationResponse buscarPorIso(String isoCode)
     {
@@ -40,6 +54,11 @@ public class LocationService
                 .orElseThrow(() -> new NotFoundException("Localização não encontrada pela ISO: " + isoCode));
     }
 
+    /**
+     * Retornar dados do perfil da localização a partir do código Iso informado
+     * @param isoCode parâmetro de código Iso usado para pesquisa
+     * @return DTO {@link LocationProfileResponse} com dados representativos de LocationProfile
+     */
     @Transactional(readOnly = true)
     public LocationProfileResponse retornarDadosPorIso(String isoCode)
     {

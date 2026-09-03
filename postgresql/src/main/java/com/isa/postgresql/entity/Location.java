@@ -36,4 +36,7 @@ public class Location
     @MapsId
     @JoinColumn(name = "location_type_code")
     private LocationType locationTypeCode;
+
+    @OneToOne(mappedBy = "location_id")
+    private LocationProfile locationProfile;
 }

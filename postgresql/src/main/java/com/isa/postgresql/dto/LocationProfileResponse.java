@@ -25,6 +25,7 @@ import java.math.BigDecimal;
  * @param humanDevelopmentIndex qualidade de vida medida a partir da longetividade, educação e renda
  */
 
+@Schema(description = "Dados de LocationProfile retornados pela API")
 public record LocationProfileResponse(
         @Schema(
                 description = "Identificador único de Location",
